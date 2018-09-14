@@ -13,14 +13,16 @@ const styles = () => ({
 const DecksContainer = withStyles(styles)(
   class extends PureComponent {
     render() {
+      const { classes, decks } = this.props
+
       return (
-        <div className={this.props.classes.root}>
+        <div className={classes.root}>
           <Grid container spacing={24} justify="space-around">
             <Grid item xs={12}>
               <h2>Pick a Deck</h2>
             </Grid>
 
-            {this.props.decks.map((deck) => (
+            {decks.map((deck) => (
               <Grid item xs={12} sm={6} md={4} lg={3}>
                 <DeckItem key={deck.title} {...deck} />
               </Grid>
