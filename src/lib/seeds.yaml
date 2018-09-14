@@ -1,7 +1,7 @@
 # Convert to JSON easily via https://www.json2yaml.com/convert-yaml-to-json
 decks:
   - title: SQL
-    new:
+    fresh:
       - question: What is SQL?
         answers:
           - text: A query language for relational databases
@@ -21,7 +21,7 @@ decks:
               correct: false
 
   - title: JS
-    new:
+    fresh:
       - question: What's a Promise?
         answers:
           - text: Code that takes a long time to run
@@ -32,7 +32,7 @@ decks:
             correct: true
 
   - title: TS
-    new:
+    fresh:
       - question: What is an interface?
         answers:
           - text: A description of the shape of an object

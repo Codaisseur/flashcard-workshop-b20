@@ -2,7 +2,7 @@
   "decks": [
     {
       "title": "SQL",
-      "new": [
+      "fresh": [
         {
           "question": "What is SQL?",
           "answers": [
@@ -41,7 +41,7 @@
     },
     {
       "title": "JS",
-      "new": [
+      "fresh": [
         {
           "question": "What's a Promise?",
           "answers": [
@@ -63,7 +63,7 @@
     },
     {
       "title": "TS",
-      "new": [
+      "fresh": [
         {
           "question": "What is an interface?",
           "answers": [

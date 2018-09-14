@@ -3,7 +3,7 @@ import seeds from '../lib/seeds.json'
 const initialState = seeds.decks.map(deck => ({
   ...deck,
   mastered: [],
-  needsPractice: []
+  needPractice: []
 }))
 
 export default (state = initialState, { type, payload } = {}) => {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
+import DecksContainer from './components/DecksContainer'
 import './App.css'
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <h1>Flash Cards</h1>
+          <DecksContainer />
         </div>
       </Provider>
     )
