@@ -1,0 +1,87 @@
+{
+  "decks": [
+    {
+      "title": "SQL",
+      "new": [
+        {
+          "question": "What is SQL?",
+          "answers": [
+            {
+              "text": "A query language for relational databases",
+              "correct": true
+            },
+            {
+              "text": "Fun",
+              "correct": false
+            },
+            {
+              "text": "What?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "question": "What does JOIN do?",
+          "answers": [
+            {
+              "text": "It combines two queries",
+              "correct": false
+            },
+            {
+              "text": "It combines results from two tables",
+              "correct": true
+            },
+            {
+              "text": "It merges data from two rows in the same table into a single row",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JS",
+      "new": [
+        {
+          "question": "What's a Promise?",
+          "answers": [
+            {
+              "text": "Code that takes a long time to run",
+              "correct": false
+            },
+            {
+              "text": "Asynchronous code that will eventually run",
+              "correct": false
+            },
+            {
+              "text": "The eventual completion or failure of the result of an asynchronous call",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TS",
+      "new": [
+        {
+          "question": "What is an interface?",
+          "answers": [
+            {
+              "text": "A description of the shape of an object",
+              "correct": true
+            },
+            {
+              "text": "A data type",
+              "correct": false
+            },
+            {
+              "text": "An object of a certain shape",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
