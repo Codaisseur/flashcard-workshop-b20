@@ -9,9 +9,7 @@ const styles = theme => ({
 })
 
 export default withStyles(styles)(({ count, label, classes }) => (
-  (count === 0) ? null : <span className={classes.root}>
-    <Typography component="p">
+  (count === 0) ? null : <Typography component="p" className={classes.root}>
       {`${count} ${label}`}
     </Typography>
-  </span>
 ))

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import DeckItem from './DeckItem'
+import { selectDeck } from '../actions/activeDeck'
 
 const styles = () => ({
   root: {
@@ -12,6 +13,14 @@ const styles = () => ({
 
 const DecksContainer = withStyles(styles)(
   class extends PureComponent {
+    // this.selectDeck(index) can be invoked
+    // because it is wrapped in a function now:
+    //   this.selectDeck(index)() will dispatch
+    //   this.props.selectDeck(index)
+    selectDeck = deckIndex => () => {
+      this.props.selectDeck(deckIndex)
+    }
+
     render() {
       const { classes, decks } = this.props
 
@@ -22,9 +31,12 @@ const DecksContainer = withStyles(styles)(
               <h2>Pick a Deck</h2>
             </Grid>
 
-            {decks.map((deck) => (
-              <Grid item xs={12} sm={6} md={4} lg={3}>
-                <DeckItem key={deck.title} {...deck} />
+            {decks.map((deck, index) => (
+              <Grid key={deck.title} item xs={12} sm={6} md={4} lg={3}>
+                <DeckItem
+                  onSelect={this.selectDeck(index)}
+                  {...deck}
+                />
               </Grid>
             ))}
           </Grid>
@@ -41,4 +53,6 @@ const mapStateToProps = ({ decks }) => ({ decks })
 //   }
 // }
 
-export default connect(mapStateToProps)(DecksContainer)
+const mapDispatchToProps = { selectDeck }
+
+export default connect(mapStateToProps, mapDispatchToProps)(DecksContainer)

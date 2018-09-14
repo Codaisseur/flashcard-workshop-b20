@@ -10,20 +10,21 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
   },
+  wrapper: {
+    cursor: 'pointer'
+  }
 })
 
 export default withStyles(styles)(
-  ({ title, fresh, mastered, needPractice, classes }) => (
-    <div>
+  ({ title, fresh, mastered, needPractice, classes, onSelect }) => (
+    <div onClick={onSelect} className={classes.wrapper}>
       <Paper className={classes.root} elevation={1}>
         <Typography variant="headline" component="h3">
           {title}
         </Typography>
-        <Typography component="p">
-          <DeckStackCounter count={fresh.length} label="new" />
-          <DeckStackCounter count={mastered.length} label="mastered" />
-          <DeckStackCounter count={needPractice.length} label="need practice" />
-        </Typography>
+        <DeckStackCounter count={fresh.length} label="new" />
+        <DeckStackCounter count={mastered.length} label="mastered" />
+        <DeckStackCounter count={needPractice.length} label="need practice" />
       </Paper>
     </div>
   )
